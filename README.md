@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# 🔥 Wildfire Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Somewhere on Earth right now, something is on fire — and NASA is watching it happen in near real-time. This app pulls that data straight from orbit (well, from NASA's satellites) and drops it onto a live Google Map you can actually click around in.
 
-## Available Scripts
+## What's happening here
 
-In the project directory, you can run:
+Every active wildfire event tracked by NASA's [EONET (Earth Observatory Natural Event Tracker)](https://eonet.gsfc.nasa.gov/) gets pinned to the map as a little flame icon. Click one, and you get the details — name, location, ID — pulled live from the API, not hardcoded.
 
-### `npm start`
+No mock data. No static screenshots. If a fire starts somewhere new, refresh the app and it shows up.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Under the hood
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React** — the whole app runs client-side
+- **Google Maps** via `google-map-react` — for the actual map rendering
+- **NASA EONET API** — the data source, updated continuously by NASA
+- **Iconify** — for the fire markers
 
-### `npm test`
+## Getting it running
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+Grab a Google Maps API key from Google Cloud Console, then create a `.env` file in the project root:REACT_APP_GOOGLE_MAPS_API_KEY=your_key_here
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Opens at `http://localhost:3000`.
