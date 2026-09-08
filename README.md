@@ -1,4 +1,4 @@
-# 🔥 Wildfire Tracker
+#Wildfire Tracker
 
 Somewhere on Earth right now, something is on fire — and NASA is watching it happen in near real-time. This app pulls that data straight from orbit (well, from NASA's satellites) and drops it onto a live Google Map you can actually click around in.
 
